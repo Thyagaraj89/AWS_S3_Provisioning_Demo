@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base look */
+:root { color-scheme: dark; }
+html, body { @apply min-h-screen bg-[#060b1b] text-white antialiased; }
+.app-aurora { @apply fixed inset-0 bg-aurora pointer-events-none; }
+
+/* glass card */
+.glass {
+  @apply rounded-2xl border border-white/10 bg-white/5 shadow-glow;
+  backdrop-filter: blur(10px);
+}
+
+/* inputs */
+.input {
+  @apply w-full rounded-xl bg-white/10 px-3 py-2.5 text-white placeholder:text-white/45
+  outline-none ring-1 ring-white/10 focus:ring-brand-cyan/50 transition;
+}
+.checkbox { @apply h-4 w-4 rounded border-white/30 bg-white/10 accent-white; }
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white/10
+  px-4 py-2.5 text-sm hover:bg-white/20 transition disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* tiny spinner */
+.spinner {
+  width: 16px; height: 16px; border-radius: 9999px;
+  border: 2px solid rgba(255,255,255,.35); border-top-color: #fff; animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

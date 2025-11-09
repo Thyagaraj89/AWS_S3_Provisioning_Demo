@@ -1,0 +1,88 @@
+# ---------------------------
+# Node.js / Next.js
+# ---------------------------
+node_modules/
+.next/
+dist/
+out/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# Environment & credentials
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.pem
+*.key
+*.crt
+*.p12
+*.cer
+*.der
+*.csr
+*.pub
+*.asc
+
+# Local credentials & secrets
+aws_credentials
+aws_config
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+
+# Logs
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# OS and IDE junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---------------------------
+# Custom project folders
+# ---------------------------
+
+# Runner job folders and Terraform outputs
+runner_jobs/
+infra/**/.terraform/
+infra/**/terraform.tfstate*
+infra/**/terraform.tfstate.backup
+infra/**/tfplan
+infra/**/outputs.json
+
+# Ignore temporary JSON or lock files from worker
+*.lock
+*.bak
+*.tmp
+*.old
+
+# Local build artifacts
+*.tar.gz
+*.zip
+*.tgz
+
+# Mac specific
+.AppleDouble
+.LSOverride
+
+# ---------------------------
+# Optional: Git safety net
+# ---------------------------
+# Prevent accidental commit of private keys or envs
+# (just for double safety)
+# Use "git update-index --skip-worktree" for extra protection if needed
